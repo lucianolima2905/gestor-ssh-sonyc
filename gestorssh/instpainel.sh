@@ -15,22 +15,22 @@ apt-get install figlet -y > /dev/null 2>&1
 rm /bin/pweb > /dev/null 2>&1
 sleep 5
 cd /bin || exit
-wget https://github.com/JeanRocha91x/psshplus-/raw/main/gestorssh/pweb > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc-/raw/main/gestorssh/pweb > /dev/null 2>&1
 chmod 777 pweb > /dev/null 2>&1
 clear
 mkdir /bin/ppweb > /dev/null 2>&1
 cd /bin/ppweb || exit
 rm *.sh > /dev/null 2>&1
-wget https://github.com/JeanRocha91x/psshplus-/raw/main/gestorssh/install.sh > /dev/null 2>&1
-wget https://github.com/JeanRocha91x/psshplus-/raw/main/gestorssh/ubuinst.sh > /dev/null 2>&1
-wget https://github.com/JeanRocha91x/psshplus-/raw/main/gestorssh/senharoot.sh > /dev/null 2>&1
-wget https://github.com/JeanRocha91x/psshplus-/raw/main/gestorssh/restbanco.sh > /dev/null 2>&1
-wget https://github.com/JeanRocha91x/psshplus-/raw/main/gestorssh/restbanco18.sh > /dev/null 2>&1
-wget https://github.com/JeanRocha91x/psshplus-/raw/main/gestorssh/empresa.sh > /dev/null 2>&1
-wget https://github.com/JeanRocha91x/psshplus-/raw/main/gestorssh/updatepainel.sh > /dev/null 2>&1
-wget https://github.com/JeanRocha91x/psshplus-/raw/main/gestorssh/updatepainel18.sh > /dev/null 2>&1
-wget https://github.com/JeanRocha91x/psshplus-/raw/main/gestorssh/updatepainelarm.sh > /dev/null 2>&1
-wget https://github.com/JeanRocha91x/psshplus-/raw/main/gestorssh/updatepainelarm18.sh > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc-/raw/main/gestorssh/install.sh > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc-/raw/main/gestorssh/ubuinst.sh > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc-/raw/main/gestorssh/senharoot.sh > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc-/raw/main/gestorssh/restbanco.sh > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc-/raw/main/gestorssh/restbanco18.sh > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc-/raw/main/gestorssh/empresa.sh > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc-/raw/main/gestorssh/updatepainel.sh > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc-/raw/main/gestorssh/updatepainel18.sh > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc-/raw/main/gestorssh/updatepainelarm.sh > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc-/raw/main/gestorssh/updatepainelarm18.sh > /dev/null 2>&1
 chmod 777 *.sh > /dev/null 2>&1
 clear
 echo -e "        \033[1;33m • \033[1;32mINSTALAÇÃO CONCLUÍDA\033[1;33m • \033[0m"

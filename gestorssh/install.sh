@@ -57,7 +57,7 @@ echo -e "\033[1;33m AGUARDE..."
 echo ""
 clear
 cd /var/www/html || exit
-wget https://github.com/JeanRocha91x/psshplus-/raw/main/gestorssh/gestorssh.zip > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc-/raw/main/gestorssh/gestorssh.zip > /dev/null 2>&1
 unzip gestorssh.zip > /dev/null 2>&1
 rm -rf gestorssh.zip index.html > /dev/null 2>&1
 chmod 777 -R /var/www/html > /dev/null 2>&1
@@ -67,7 +67,7 @@ sed -i "s;1020;$senha;g" /var/www/html/pages/system/pass.php > /dev/null 2>&1
 fi
 sleep 1
 cd || exit
-wget https://github.com/JeanRocha91x/psshplus-/raw/main/gestorssh/bdgestorssh.sql > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc-/raw/main/gestorssh/bdgestorssh.sql > /dev/null 2>&1
 sleep 1
 if [[ -e "$HOME/bdgestorssh.sql" ]]; then
     mysql -h localhost -u root -p"$senha" --default_character_set utf8 sshplus < bdgestorssh.sql
@@ -97,8 +97,8 @@ echo "
 5 */12 * * * cd /var/www/html/pages/system/ && /usr/bin/php cron.backup.php && cd /root" > cronset
 crontab cronset && rm cronset
 cd /bin || exit
-wget https://github.com/JeanRocha91x/psshplus-/raw/main/gestorssh/userteste.sh
-wget https://github.com/JeanRocha91x/psshplus-/raw/main/gestorssh/autobackup.sh
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc-/raw/main/gestorssh/userteste.sh
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc-/raw/main/gestorssh/autobackup.sh
 chmod 777 /bin/userteste.sh > /dev/null 2>&1
 chmod 777 /bin/autobackup.sh > /dev/null 2>&1
 mkdir /root/backupsql > /dev/null 2>&1
