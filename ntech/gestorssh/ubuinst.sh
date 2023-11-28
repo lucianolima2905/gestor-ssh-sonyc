@@ -32,7 +32,7 @@ curl -sS https://getcomposer.org/installer | php > /dev/null 2>&1
 mv composer.phar /usr/local/bin/composer > /dev/null 2>&1
 chmod +x /usr/local/bin/composer > /dev/null 2>&1
 cd /var/www/html || exit
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/gestorssh18.zip > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/gestorssh18.zip > /dev/null 2>&1
 apt-get install unzip > /dev/null 2>&1
 unzip gestorssh18.zip > /dev/null 2>&1
 (echo yes; echo yes; echo yes; echo yes) | composer install > /dev/null 2>&1
@@ -62,7 +62,7 @@ mv /tmp/pass /var/www/html/pages/system/pass.php
 }
 function inst_db { 
 cd || exit
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/bdgestorssh.sql > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/bdgestorssh.sql > /dev/null 2>&1
 sleep 1
 if [[ -e "$HOME/bdgestorssh.sql" ]]; then
     mysql -h localhost -u sshplus -p"$pwdroot" --default_character_set utf8 sshplus < bdgestorssh.sql > /dev/null 2>&1
@@ -118,7 +118,7 @@ dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
 clear
 echo -e "\E[44;1;37m    INSTALAR PAINELWEB GESTOR-SSH     \E[0m" 
 echo ""
-echo -e "                 \033[1;31mBy @Igorhenri0407\033[1;36m"
+echo -e "                 \033[1;31mBy @sonycltda\033[1;36m"
 echo ""
 read -p "DIGITE SUA SENHA ROOT: " pwdroot
 echo "root:$pwdroot" | chpasswd
@@ -138,7 +138,7 @@ tst_bkp
 clear
 echo -e "\033[1;32m GESTOR-SSH INSTALADO COM SUCESSO!"
 echo ""
-echo -e "                 \033[1;31mBy @Igorhenri0407\033[1;36m"
+echo -e "                 \033[1;31mBy @sonycltda\033[1;36m"
 echo ""
 echo -e "\033[1;36m SEU PAINEL:\033[1;37m http://$IP/admin\033[0m"
 echo -e "\033[1;36m USUÁRIO:\033[1;37m admin\033[0m"
@@ -150,7 +150,7 @@ echo -e "\033[1;36m LOJA DE APPS:\033[1;37m http://$IP/phpmyadmin\033[0m"
 echo -e "\033[1;36m USUÁRIO:\033[1;37m sshplus\033[0m"
 echo -e "\033[1;36m SENHA:\033[1;37m $pwdroot\033[0m"
 echo ""
-echo -e "\033[1;33m MAIS INFORMAÇÕES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@Igorhenri0407\033[0m"
+echo -e "\033[1;33m MAIS INFORMAÇÕES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@sonycltda\033[0m"
 echo ""
 sed -i "s;upload_max_filesize = 2M;upload_max_filesize = 64M;g" /etc/php/7.4/apache2/php.ini > /dev/null 2>&1
 sed -i "s;post_max_size = 8M;post_max_size = 64M;g" /etc/php/7.4/apache2/php.ini > /dev/null 2>&1

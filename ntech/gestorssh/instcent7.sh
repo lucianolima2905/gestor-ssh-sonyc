@@ -50,14 +50,14 @@ fi
 }
 phpmyadminfix(){
 rm /etc/httpd/conf.d/phpMyAdmin.conf
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/phpMyAdmin.conf -O /etc/httpd/conf.d/phpMyAdmin.conf
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/phpMyAdmin.conf -O /etc/httpd/conf.d/phpMyAdmin.conf
 chmod 777 /etc/httpd/conf.d/phpMyAdmin.conf
 service httpd restart
 installweb
 }
 installweb(){
 cd /var/www/html
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/gestorssh.zip
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/gestorssh.zip
 unzip gestorssh.zip
 sed -i "s;1020;$root_password;g" /var/www/html/pages/system/pass.php > /dev/null 2>&1
 rm gestorssh.zip
@@ -66,7 +66,7 @@ cd
 createdb
 }
 createdb(){
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/bdgestorssh.sql
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/bdgestorssh.sql
 mysql -h localhost -u root -p$root_password -e "CREATE DATABASE sshplus"
 mysql -h localhost -u root -p$root_password --default_character_set utf8 sshplus < bdgestorssh.sql
 rm bdgestorssh.sql
@@ -87,8 +87,8 @@ echo "
 5 */12 * * * cd /var/www/html/pages/system/ && /usr/bin/php cron.backup.php && cd /root" > cronset
 crontab cronset && rm cronset
 cd $HOME || exit
-wget -qO- https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/uteste > /bin/usersteste.sh
-wget -qO- https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/backupauto > /bin/autobackup.sh
+wget -qO- https://github.com/lucianolima2905/gestor-ssh-sonyc/uteste > /bin/usersteste.sh
+wget -qO- https://github.com/lucianolima2905/gestor-ssh-sonyc/backupauto > /bin/autobackup.sh
 chmod 777 /bin/usersteste.sh
 chmod 777 /bin/autobackup.sh
 mkdir /root/backupsql

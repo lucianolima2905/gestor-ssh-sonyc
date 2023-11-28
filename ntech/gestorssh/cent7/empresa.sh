@@ -35,7 +35,7 @@ empresaatual=$(cut -d"'" -f2 /var/www/html/empresa)
 echo ""
 echo -e "\E[44;1;37m        MUDAR NOME DA LOGO        \E[0m"
 echo ""
-echo -e "                           \033[1;31mBy @Igorhenri0407\033[1;36m"
+echo -e "                           \033[1;31mBy @sonycltda\033[1;36m"
 echo ""
 echo ""
 echo -e "\033[1;36m NOME ATUAL:\033[1;37m $empresaatual\033[0m"

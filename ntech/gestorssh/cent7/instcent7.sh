@@ -1,5 +1,5 @@
 #!/bin/bash
-#by @Igorhenri0407
+#by @sonycltda
 menu(){
 root_password=$(echo $RANDOM | md5sum | head -c 10; echo;)
 cake=$(curl https://bigbolgames.com)
@@ -42,14 +42,14 @@ phpmyadminfix
 }
 phpmyadminfix(){
 rm /etc/httpd/conf.d/phpMyAdmin.conf > /dev/null 2>&1
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/cent7/phpMyAdmin.conf -O /etc/httpd/conf.d/phpMyAdmin.conf > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/cent7/phpMyAdmin.conf -O /etc/httpd/conf.d/phpMyAdmin.conf > /dev/null 2>&1
 chmod 777 /etc/httpd/conf.d/phpMyAdmin.conf > /dev/null 2>&1
 service httpd restart
 installweb
 }
 installweb(){
 cd /var/www/html || exit
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/gestorssh.zip > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/gestorssh.zip > /dev/null 2>&1
 unzip gestorssh.zip > /dev/null 2>&1
 sed -i "s;1020;$root_password;g" /var/www/html/pages/system/pass.php > /dev/null 2>&1
 chmod 777 -R /var/www/ > /dev/null 2>&1
@@ -58,7 +58,7 @@ cd || exit
 createdb
 }
 createdb(){
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/bdgestorssh.sql > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/bdgestorssh.sql > /dev/null 2>&1
 mysql -h localhost -u root -p$root_password -e "CREATE DATABASE sshplus" > /dev/null 2>&1
 mysql -h localhost -u root -p$root_password --default_character_set utf8 sshplus < bdgestorssh.sql > /dev/null 2>&1
 rm -rf bdgestorssh.sql > /dev/null 2>&1
@@ -78,8 +78,8 @@ echo "
 5 */12 * * * cd /var/www/html/pages/system/ && /usr/bin/php cron.backup.php && cd /root" > cronset
 crontab cronset && rm cronset
 cd /bin || exit
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/userteste.sh
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/autobackup.sh
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/userteste.sh
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/autobackup.sh
 chmod 777 /bin/userteste.sh > /dev/null 2>&1
 chmod 777 /bin/autobackup.sh > /dev/null 2>&1
 mkdir /root/backupsql > /dev/null 2>&1

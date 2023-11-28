@@ -163,30 +163,30 @@ install_continue() {
 install_continue2() {
 rm /bin/pweb > /dev/null 2>&1
 cd /bin || exit
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/pweb > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/pweb > /dev/null 2>&1
 chmod 777 pweb > /dev/null 2>&1
 clear
 [[ ! -d /bin/ppweb ]] && mkdir /bin/ppweb
 cd /bin/ppweb || exit
 rm *.sh versao* > /dev/null 2>&1
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/install.sh > /dev/null 2>&1
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/ubuinst.sh > /dev/null 2>&1
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/senharoot.sh > /dev/null 2>&1
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/restbanco.sh > /dev/null 2>&1
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/restbanco18.sh > /dev/null 2>&1
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/empresa.sh > /dev/null 2>&1
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/updatepainel.sh > /dev/null 2>&1
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/updatepainel18.sh > /dev/null 2>&1
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/updatepainelarm.sh > /dev/null 2>&1
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/updatepainelarm18.sh > /dev/null 2>&1
-wget https://github.com/Igorhenri0407/gestorssh/raw/ntech/gestorssh/versao > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/install.sh > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/ubuinst.sh > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/senharoot.sh > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/restbanco.sh > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/restbanco18.sh > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/empresa.sh > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/updatepainel.sh > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/updatepainel18.sh > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/updatepainelarm.sh > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/updatepainelarm18.sh > /dev/null 2>&1
+wget https://github.com/lucianolima2905/gestor-ssh-sonyc/versao > /dev/null 2>&1
 chmod 777 *.sh > /dev/null 2>&1
 echo ""
 echo ""
 echo -e "        \033[1;33m • \033[1;32mINSTALAÇÃO CONCLUÍDA\033[1;33m • \033[0m"
 echo ""
 echo -e "\033[1;31m \033[1;33mCOMANDO PRINCIPAL: \033[1;32mpweb\033[0m"
-echo -e "\033[1;33m MAIS INFORMAÇÕES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@Igorhenri0407\033[0m"
+echo -e "\033[1;33m MAIS INFORMAÇÕES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@sonycltda\033[0m"
 cat /dev/null > ~/.bash_history && history -c
 }
 install_start
